@@ -1,7 +1,8 @@
 :root {
-    --main: rgb(245, 54, 29);
+    --main:  rgb(204, 25, 1);
+    --secondary: rgb(199, 243, 252);
     --highlight: white;
-    font-size: 25px;
+    font-size: 45px;
 }
 
 body {
@@ -12,15 +13,16 @@ body {
 header {
     background-color: var(--main);
     margin: -10px;
-    padding: 15px 15px 15px 50px;
+    padding: 1.5% 1.5% 1.5% 3%;
     border: none;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 nav {
     display: flex;
-    align-items: center;
+    align-content: center;
 
 }
 
@@ -35,7 +37,9 @@ ul {
 
 li {
     display: flex;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
 }
 /* main {
     display: flex;
@@ -45,33 +49,43 @@ li {
 } */
 
 h1, h2, h3, h4 {
-    font-family: sans-serif;
+    font-family: monospace;
 }
 
 h1, h3, h4 {
     color: var(--highlight)
 }
 
-h1 {
-    font-size: 200%;
-
+h1, h2 {
+    font-size: 60%;
+    text-align: center;
 }
-
 
 h2 {
     width: 110px;
-    text-align: center;
     margin: 10px;
     padding: 20px;
     background-color: var(--highlight);
-    color: var(--main);
-    font-size: 110%;
-    box-shadow: -10px 10px 0px rgb(199, 243, 252);
+    color: rgb(245, 54, 29);
+    box-shadow: -10px 10px 0px var(--secondary);
 }
-/*
-ul {
-    list-style: none;
+
+a {
+    text-decoration: none;
+ }
+
+h2:hover {
+    color: var(--secondary);
 }
+
+ /* li a:hover {
+    color: var(--secondary);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} */
+
+
 
 .card-header {
     position: absolute;
@@ -109,18 +123,22 @@ footer {
     padding: 20px;
 }
 
-  
-@media screen and (min-width: 768px) {
-    .card{
-      max-width: 50%;
-      flex: 0 0 50%;
+@media screen and (min-width: 576px) {
+    h1 {
+       font-size: 100%;
     }
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        background-color: black;
+  }
+  
+@media screen and (min-width: 992px) {
+
   }
 
-@media screen and (min-width: 992px) {
-    .card {
-      max-width:33.3%;
-      flex: 0 0 33.3%;
-    }
-  }
-  
