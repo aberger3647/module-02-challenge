@@ -12,18 +12,13 @@ body {
 
 header {
     background-color: var(--main);
-    /*margin: -10px;*/
+    margin: -10px;
     padding: 1.5% 1.5% 1.5% 3%;
     border: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-
-nav {
-
-}
-
 
 ul {
     display: block;
@@ -100,8 +95,13 @@ p {
 
 a {
     text-decoration: none;
+    color: var(--secondary);
+    font-weight: bold;
  }
 
+ a:hover {
+    color: var(--main);
+ }
 
  /* li a:hover {
     color: var(--secondary);
@@ -110,20 +110,31 @@ a {
     right: 10px;
 } */
 
+#about-and-headshot {
+    display: flex;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
 }
 
-article, .section-header {
+section, .section-header {
     margin: 0px;
     padding: 30px;
     position: relative;
     width: 100%;
+
+}
+
+#headshot {
+    max-width: 30%;
+    float: right;
 }
 
 img {
     width: 100%;
+    margin: 10px;
     height: auto;
     box-shadow: -10px 10px 0px var(--secondary);
 }
@@ -134,6 +145,11 @@ img {
     margin: 0px;
     padding: 10px;;
     bottom: 32px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
 }
 
 footer {
@@ -152,25 +168,41 @@ footer {
         display: flex;
         justify-content: center;
     }
+    .small-image {
+        width: 50%;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .section-header {
         width: 20%;
     }
-    article {
+    section {
         width: 60%;
     }
     h3 {
         text-align: right;
     }
+    .small-image {
+        width: 50%;
+        height: auto;
+    }
+}
   
   
 @media screen and (min-width: 992px) {
     header {
         justify-content: space-between;
     }
-    article {
+    .section-header {
+        width: 20%;
+    }
+    section {
         width: 40%;
+    }
+    .small-image {
+        width: 50%;
+        height: auto;
     }
   }
