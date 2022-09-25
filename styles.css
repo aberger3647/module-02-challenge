@@ -1,0 +1,126 @@
+:root {
+    --main: rgb(245, 54, 29);
+    --highlight: white;
+    font-size: 25px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--main);
+    margin: -10px;
+    padding: 15px 15px 15px 50px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+}
+
+
+ul {
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+        flex-wrap: wrap;
+}
+/* main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(208, 203, 200);
+} */
+
+h1, h2, h3, h4 {
+    font-family: sans-serif;
+}
+
+h1, h3, h4 {
+    color: var(--highlight)
+}
+
+h1 {
+    font-size: 200%;
+
+}
+
+
+h2 {
+    width: 110px;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--highlight);
+    color: var(--main);
+    font-size: 110%;
+    box-shadow: -10px 10px 0px rgb(199, 243, 252);
+}
+/*
+ul {
+    list-style: none;
+}
+
+.card-header {
+    position: absolute;
+    top: 0px;
+}
+
+.card {
+    height: 60%;
+    max-width: 100%;
+    border-style: dashed;
+    border-color: white;
+    padding: 10px;
+    display: block;
+    position: relative;
+    flex: 1 0 100%;
+
+}
+
+code {
+    display: block;
+    font-family: monospace;
+    font-size: 12px;
+    color: white;
+}
+
+.code-box {
+    background: linear-gradient(rgb(157, 29, 149), rgb(195, 26, 195));
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+  
+@media screen and (min-width: 768px) {
+    .card{
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+
+@media screen and (min-width: 992px) {
+    .card {
+      max-width:33.3%;
+      flex: 0 0 33.3%;
+    }
+  }
+  
