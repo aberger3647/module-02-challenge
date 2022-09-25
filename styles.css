@@ -1,5 +1,5 @@
 :root {
-    --main:  rgb(204, 25, 1);
+    --main:  rgb(245, 54, 29);
     --secondary: rgb(199, 243, 252);
     --highlight: white;
     font-size: 45px;
@@ -12,27 +12,25 @@ body {
 
 header {
     background-color: var(--main);
-    margin: -10px;
+    /*margin: -10px;*/
     padding: 1.5% 1.5% 1.5% 3%;
     border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 nav {
-    display: flex;
-    align-content: center;
 
 }
 
 
 ul {
-    display: flex;
+    display: block;
     margin: 0px;
     padding: 10px;
     list-style: none;
-    flex-wrap: wrap;
+ 
 }
 
 li {
@@ -41,18 +39,17 @@ li {
     position: relative;
     justify-content: center;
 }
-/* main {
+
+main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(208, 203, 200);
-} */
+}
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
     font-family: monospace;
 }
 
-h1, h3, h4 {
+h1, h3 {
     color: var(--highlight)
 }
 
@@ -61,22 +58,50 @@ h1, h2 {
     text-align: center;
 }
 
+h2, h3{
+    color: var(--main);
+}
+
 h2 {
     width: 110px;
     margin: 10px;
     padding: 20px;
     background-color: var(--highlight);
-    color: rgb(245, 54, 29);
     box-shadow: -10px 10px 0px var(--secondary);
+}
+
+h2:hover {
+    color: var(--secondary);
+}
+
+h3 {
+    font-size: 80%;
+    text-align: center;
+    margin: 0px;
+    text-decoration: underline var(--secondary);
+    text-decoration-thickness: 6px;
+    text-underline-offset: 10px;
+}
+
+h4 {
+    font-size: 60%;
+    color: var(--main);
+}
+
+h4:hover {
+    color: var(--highlight);
+}
+
+p {
+    font-size: 50%;
+    line-height: 1.5;
+    margin: 0px;
 }
 
 a {
     text-decoration: none;
  }
 
-h2:hover {
-    color: var(--secondary);
-}
 
  /* li a:hover {
     color: var(--secondary);
@@ -85,42 +110,38 @@ h2:hover {
     right: 10px;
 } */
 
-
-
-.card-header {
-    position: absolute;
-    top: 0px;
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.card {
-    height: 60%;
-    max-width: 100%;
-    border-style: dashed;
-    border-color: white;
-    padding: 10px;
-    display: block;
+article, .section-header {
+    margin: 0px;
+    padding: 30px;
     position: relative;
-    flex: 1 0 100%;
-
+    width: 100%;
 }
 
-code {
-    display: block;
-    font-family: monospace;
-    font-size: 12px;
-    color: white;
+img {
+    width: 100%;
+    height: auto;
+    box-shadow: -10px 10px 0px var(--secondary);
 }
 
-.code-box {
-    background: linear-gradient(rgb(157, 29, 149), rgb(195, 26, 195));
-    border-radius: 5px;
-    padding: 10px;
-
+.project-title {
+    position: absolute;
+    background-color: var(--secondary);
+    margin: 0px;
+    padding: 10px;;
+    bottom: 32px;
 }
 
 footer {
     text-align: center;
     padding: 20px;
+    height: 20;
+    background-color: var(--secondary);
+    margin: -20px;
 }
 
 @media screen and (min-width: 576px) {
@@ -134,11 +155,22 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-    header {
-        background-color: black;
-  }
+    .section-header {
+        width: 20%;
+    }
+    article {
+        width: 60%;
+    }
+    h3 {
+        text-align: right;
+    }
+  
   
 @media screen and (min-width: 992px) {
-
+    header {
+        justify-content: space-between;
+    }
+    article {
+        width: 40%;
+    }
   }
-
