@@ -12,13 +12,14 @@ body {
 
 header {
     background-color: var(--main);
-    margin: -10px -10px 20px -10px;
+    margin: -10px;
     padding: 1.5% 1.5% 1.5% 3%;
     border: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 
 h1, h2, h3, h4, p {
     font-family: monospace;
@@ -33,7 +34,7 @@ h1, h2 {
     text-align: center;
 }
 
-h2, h3 {
+h2, h3{
     color: var(--main);
 }
 
@@ -61,11 +62,6 @@ h3 {
 h4 {
     font-size: 60%;
     color: var(--main);
-    position: absolute;
-    background-color: var(--secondary);
-    margin: 0px;
-    padding: 10px;;
-    bottom: 12px;
 }
 
 h4:hover {
@@ -89,7 +85,7 @@ li {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .main-content {
@@ -101,7 +97,6 @@ main {
 .row {
     display: flex;
     flex-wrap: wrap;
- 
 }
 
 p {
@@ -120,92 +115,81 @@ a {
     color: var(--main);
  }
 
+ /* li a:hover {
+    color: var(--secondary);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} */
 
-.section-title {
+.section-header {
     padding: 10px;
     margin: 10px;
     width: 100%;
     justify-content: center;
 }
 
+#headshot {
+    max-width: 30%;
+    float: right;
+}
+
 img {
-    /* width: 100%; */
-    flex-basis: 100%;
+    width: 100%;
     margin: 10px;
     height: auto;
     box-shadow: -10px 10px 0px var(--secondary);
 }
 
-.large-img, .small-img {
-    position: relative;
+.project-title {
+    position: absolute;
+    background-color: var(--secondary);
+    margin: 0px;
+    padding: 10px;;
+    bottom: 32px;
 }
 
-#contact-info {
-    display: block;
-    margin: 15px 10px 50px 10px;
-    text-align: center;
-}
-
-#contact-info p {
-    line-height: 3;
+.contact-info {
+    display: flex;
+    justify-content: space-between;
 }
 
 footer {
+    text-align: center;
     padding: 20px;
     height: 20;
     background-color: var(--secondary);
     margin: -20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
     h1 {
-        font-size: 100%;
+       font-size: 100%;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+    .small-image {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-header {
+        width: 20%;
+    }
+    section {
+        width: 60%;
     }
     h3 {
         text-align: right;
     }
-    ul {
-        display: flex;
+    .small-image {
+        width: 50%;
+        height: auto;
     }
-    .main-content {
-        display: flex;
-        flex-grow: 3;
-        max-width: 1000px;
-    }
-
-    .section-title {
-        display: flex;
-        flex-grow: 1;
-        text-align: right;
-    }
-    #contact-info {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-
-    #contact-info p {
-        line-height: 1.3;
-    }
-    #about-text p {
-        flex-grow: 2;
-    }
-    #about-photo img {
-        flex-grow: 1;
-        margin-left: 20px;
-    }
-    .large-img {
-        flex-grow: 2;
-        position: relative;
-    }
-    .small-img {
-        flex-grow: 1;
-
-    }
-    img {
-        max-width: 500px;
-    }
-    
 }
   
   
@@ -213,11 +197,14 @@ footer {
     header {
         justify-content: space-between;
     }
-    h1 {
-        text-align: left;
+    .section-header {
+        width: 20%;
     }
-    h3 {
-        text-align: right;
+    section {
+        width: 40%;
     }
- 
+    .small-image {
+        width: 50%;
+        height: auto;
+    }
   }
