@@ -95,7 +95,8 @@ main {
 .main-content {
     padding: 10px;
     margin: 10px;
-    width: 100%;
+    max-width: 100%;
+    display: flex;
 }
 
 .row {
@@ -124,16 +125,19 @@ a {
 .section-title {
     padding: 10px;
     margin: 10px;
-    width: 100%;
     justify-content: center;
 }
 
 img {
-    /* width: 100%; */
     flex-basis: 100%;
     margin: 10px;
     height: auto;
     box-shadow: -10px 10px 0px var(--secondary);
+
+}
+
+#about-photo {
+    max-width: 10%;
 }
 
 .large-img, .small-img {
@@ -169,14 +173,12 @@ footer {
     }
     .main-content {
         display: flex;
-        flex-grow: 3;
-        max-width: 1000px;
+        max-width: 2 0 66.66%;
     }
 
     .section-title {
-        display: flex;
-        flex-grow: 1;
         text-align: right;
+  
     }
     #contact-info {
         display: flex;
